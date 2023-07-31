@@ -1,0 +1,42 @@
+
+Setting environment for using XAMPP for Windows.
+Isuru-Eranda-PC c:\xampp
+# mysql -h localhost -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.28-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> CREATE DATABASE COMPANYDB;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> USE COMPANYDB;
+Database changed
+MariaDB [COMPANYDB]> CREATE TABLE EMP (IdNum INT(4) PRIMARY KEY, LName VARCHAR(15), FName VARCHAR(15), JobCode VARCHAR(3), Salary INT(5), Phone VARCHAR(15));
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [COMPANYDB]> INSERT INTO EMP(IdNum,LName,FName,JobCode,Salary,Phone) VALUES
+    -> (1876,'CHIN','JACK','TA1',42400,'212/588-5634'),
+    -> (1114, 'GREENWALD','JANICE','ME3',38000,'212/588-1092'),
+    -> (1556,'PENNINGTON', 'MICHAEL','ME1',29860,'718/383-5681'),
+    -> (1354,'PARKER','MARY','FA3',65800,'914/455-2337'),
+    -> (1130,'WOOD','DEBORAH','PT2',36514,'212/587-0013');
+Query OK, 5 rows affected (0.011 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+MariaDB [COMPANYDB]> SELECT * FROM EMP;
++-------+------------+---------+---------+--------+--------------+
+| IdNum | LName      | FName   | JobCode | Salary | Phone        |
++-------+------------+---------+---------+--------+--------------+
+|  1114 | GREENWALD  | JANICE  | ME3     |  38000 | 212/588-1092 |
+|  1130 | WOOD       | DEBORAH | PT2     |  36514 | 212/587-0013 |
+|  1354 | PARKER     | MARY    | FA3     |  65800 | 914/455-2337 |
+|  1556 | PENNINGTON | MICHAEL | ME1     |  29860 | 718/383-5681 |
+|  1876 | CHIN       | JACK    | TA1     |  42400 | 212/588-5634 |
++-------+------------+---------+---------+--------+--------------+
+5 rows in set (0.000 sec)
+
+MariaDB [COMPANYDB]>
