@@ -1,0 +1,403 @@
+/* font-family: 'Tilt Neon', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Tilt+Neon&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+}
+
+/* navbar  */
+
+
+.navbar-custom{
+    background-color: #222831;
+    opacity: 0.99;
+  }
+  
+  .collapse{
+    color: white;
+  }
+  
+  .nav-icon{
+    align-items: center;
+    position: relative;
+    margin: 7px 20px;
+  }
+  
+  .nav-icon .cart-number {
+    position: absolute;
+    top:0;
+    right: 0;
+    height: 18px;
+    width: 18px;
+    font-size: 10px;
+    color: black;
+    margin: -8px -12px;
+    border-radius: 100%;
+    border: 2px solid #222831;
+    background: #f4f0f0;
+  }
+  
+  .nav-center{
+    text-align: center;
+  }
+  
+  .nav-item{
+    padding: 10px;
+  }
+  
+  .nav-item:hover .nav-link{
+  color: #00adb5 !important;
+  }
+  
+  .nav-link{
+  color: #f9f4f4 !important;
+  font-weight: 500;
+    transition: all 200ms linear;
+  }
+  .nav-item:after{
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background-color: #00adb5;
+  opacity: 0;
+    transition: all 200ms linear;
+  }
+  .nav-item:hover:after{
+  bottom: 0;
+  opacity: 2;
+  }
+  
+  .nav-item.active:hover:after{
+  opacity: 0;
+  }
+  .nav-item{
+  position: relative;
+    transition: all 200ms linear;
+  }
+  
+  .nav-link.nav-center.right {
+    display: flex;
+    justify-content: center;
+  }
+  
+  input[type=search]{
+    width: 40px;
+    height: 38px;
+    padding: 8px 20px 8px 20px;
+    border: #fff solid 2px;
+    font-size: 18px;
+    border-radius: 25px;
+    background-position: 2% 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-image: url('image/search.png');
+    background-color: transparent;
+    transition: 0.5s all ease-in-out;
+    filter: brightness(170%);
+    border: none;
+  }
+  
+  input[type=search]:focus,
+  input[type=search]:not(:placeholder-shown){
+    width: 200px;
+    background-color: #fff;
+    filter: brightness(100%);
+  }
+
+
+/* header */
+
+
+fieldset{
+    background-color: black;
+    color: white;
+    width: 70%;
+    justify-content: center;
+    border-width: 0%;
+    margin-top: 10%;
+    border-radius: 40px;
+    padding: 3% 5% 5%;
+}
+
+body{
+    background-image: url("/image/");
+    background-position: center;
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.custom-background{
+    background-color: black;
+    opacity: 0.4;
+    
+}
+
+.heading{
+    color: white;
+    text-align: center;
+}
+
+.discription{
+    margin-top: 3%;
+    text-align: justify;
+    font-size: 90%;
+    
+}
+
+.topic-members{
+    text-align: center;
+}
+
+/* counter */
+
+.container-1{
+    margin-top:100px;
+}
+
+.counter-box {
+	display: block;
+	background: #f6f6f6;
+	padding: 40px 20px 37px;
+	text-align: center;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.counter-box:hover {
+    background: #00ADB5; 
+    color: #fff; 
+}
+
+.counter-box p {
+	margin: 5px 0 0;
+	padding: 0;
+	color: #909090;
+	font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.counter-box:hover p {
+    color: #fff;
+}
+
+.counter-box i {
+	font-size: 60px;
+	margin: 0 0 15px;
+	color: #393E46;
+    transition: color 0.3s ease;
+    
+}
+
+.counter-box:hover i {
+    color: #fff;
+}
+
+.counter { 
+	display: block;
+	font-size: 32px;
+	font-weight: 700;
+	color: #666;
+	line-height: 28px;
+    transition: color 0.3s ease;
+}
+
+.counter-box:hover .counter {
+    color: #fff;
+}
+
+
+/* topic  */
+
+.topic{
+    font-size: 70px;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: left;
+    margin-left: 220px;
+}
+
+.topic .crew{
+    margin-left: 0px;
+}
+
+.topic-paragraph{
+    padding-left: 620px;
+    padding-right: 210px;
+    text-align: justify;
+    margin-top: -160px;
+    margin-bottom: 50px;
+}
+
+
+/* cards */
+
+.row{
+    justify-content: center;
+}
+
+.hover {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 60%;
+}
+
+.hover-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    transition: all 0.4s;
+}
+
+.hover img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.hover-content {
+    position: relative;
+    z-index: 99;
+}
+
+
+/* DEMO 1 ============================== */
+.hover-1 img {
+    width: 105%;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    transition: all 0.3s;
+
+}
+
+.hover-1-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    transition: all 0.4s;
+}
+
+.hover-1-content img {
+    margin-left: 75px;
+    margin-top: -50px;
+    height: 60px;
+
+}
+
+.hover-1 .hover-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hover-1-description {
+    transform: translateY(0.5rem);
+    transition: all 0.4s;
+    opacity: 0;
+    font-weight: bolder;
+}
+
+.hover-1:hover .hover-1-content {
+    bottom: 2rem;
+}
+
+.hover-1:hover .hover-1-description {
+    opacity: 1;
+    transform: none;
+}
+
+.hover-1:hover img {
+    left: 0;
+}
+
+.hover-1:hover .hover-overlay {
+    opacity: 1;
+}
+
+.hover-1-description i{
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+/* footer */
+.list-inline-item .btn-floating {
+    font-size: 23px;
+}
+
+.footerbg {
+    background-color: #222831;
+}
+
+/* Responsive */
+
+@media (max-width: 1346px){
+    .topic{
+        text-align: center;
+        margin-left: 40px;
+    }
+
+    .topic-paragraph{
+        margin-top: 20px;
+        text-align: center;
+        padding: 2px;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}
+
+@media (max-width: 990px){
+    .row .col-lg-4{
+        width: 400px;
+    }
+
+    .topic-members .topic{
+        font-size: 50px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body{
+        padding-top:100px ;
+    }
+
+    .navbar{
+        top: 0;
+    }
+
+    .col-md-4{
+        text-align: center;
+    }
+
+    .col-md-3 p{
+        text-align: center;
+    }
+    .counter-box{
+        margin-bottom: 20px;
+        display: block;
+    }
+
+}

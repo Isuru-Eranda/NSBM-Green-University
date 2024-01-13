@@ -1,0 +1,334 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #EEEEEE;
+    transition: all 0.3s ease;
+}
+
+ .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 240px;
+    padding: 10px 14px;
+    background: #222831;
+    transition: all 0.3s ease;
+    z-index: 100;  
+}
+.sidebar.close{
+    width: 88px;
+}
+
+.sidebar header{
+  position: relative;
+  padding-top: 5px;
+}
+
+.sidebar header .image-text{
+  display: flex;
+  align-items: center;
+}
+
+.sidebar header .image {
+  min-width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar header .image img{
+  width: 60px;
+  margin-left: -10px;
+}
+
+.sidebar header .logo-text{
+  display: flex;
+  flex-direction: column;
+}
+header .image-text .name {
+  margin-top: 2px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 30%;
+    right: -60px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul{
+    padding: 0;
+  }
+
+.sidebar li{
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.sidebar .icon{
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon{
+    color: #EEEEEE;
+    transition: all 0.3s ease;
+}
+
+.sidebar .text{
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+.sidebar.close .text{
+    opacity: 0;
+}
+
+.sidebar .menu{
+    margin-top: 40px;
+}
+
+.sidebar li a{
+    list-style: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sidebar li a:hover{
+    background-color: #393E46;
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: #00ADB5;
+}
+
+.sidebar .menu-bar{
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+.menu-bar::-webkit-scrollbar{
+    display: none;
+}
+
+.home{
+    position: absolute;
+    top: 0;
+    top: 0;
+    left: 240px;
+    height: 100vh;
+    width: calc(100% - 240px);
+    background-color: #EEEEEE;
+    transition: all 0.3s ease;
+}
+.home .header{
+    font-size: 30px;
+    font-weight: 500;
+    color: black;
+    padding: 12px 60px;
+    background-color: #FFF;
+}
+
+.sidebar.close ~ .home{
+    left: 88px;
+    height: 100vh;
+    width: calc(100% - 88px);
+}
+
+.home .container {
+    width: 100%;
+	color: #FFFFFF;
+    height: calc(100vh - 99px);
+    margin-top: 30px;
+}
+
+.home .container #main {
+	background: #FFF;
+	color: #000;
+	text-transform: uppercase;
+    border-radius: 5px;
+    width: 100%;
+    max-height: calc(100% - 30px);
+    overflow: scroll;
+    align-content: flex-start;
+    padding: 0 20px;
+    position: relative;
+    margin: 0;
+    border: 1px solid #393E46;
+}
+
+.home .container #main table {
+    border-collapse: separate;
+}
+
+.home .container #main table td,
+.home .container #main table th
+{
+    padding: 20px 40px;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+#main::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+#main::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+#main:hover::-webkit-scrollbar-thumb{ 
+    visibility: visible;
+}
+
+tbody tr td i {
+    color:#000;
+}
+
+tbody tr:last-child {
+    position: sticky;
+    bottom: 0;
+    background: #FFF;
+    text-align: center;
+    z-index: 2;
+}
+
+tbody tr:last-child td a {
+    text-decoration: none;
+    color: black;
+}
+
+thead tr{
+    position: sticky;
+    top: 0;
+    background: #FFF;
+    z-index: 1;
+}
+
+thead tr th {
+    border-bottom: 1px solid #EEEEEE;
+}
+
+tbody tr td {
+    border-top: 1px solid #EEEEEE;
+    height: 81px;
+}
+
+tbody tr:first-child td {
+    border-top: none;
+}
+
+.form-control:focus {
+    border-color: #ced4da;
+    box-shadow: none;
+}
+
+.form-select:focus {
+    border-color: #ced4da; 
+    box-shadow: none;
+}
+
+.btn-custom {
+    background-color: #000; 
+    border-color: #000;
+    color: #EEEEEE;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    color: #FFF;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
+}
+
+.btn-danger {
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.buttons .left{
+    margin-right:auto;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .buttons {
+flex-direction: column;
+    }
+
+    button,a {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .sidebar.close{
+        width: 0px;
+        padding: 0;
+    }
+
+    .sidebar.close img {
+        display: none;
+    }
+
+    .sidebar.close header .toggle {
+        padding-top: 25px;
+        right: -45px;
+    }
+
+    .sidebar.close ~ .home{
+        left: 0 !important;
+        width: 100% !important;
+    }
+}
